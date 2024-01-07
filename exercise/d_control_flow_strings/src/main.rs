@@ -24,7 +24,7 @@ fn main() {
             sum();
         } else if arg == "double" {
             double();
-        } else {
+        } else if arg == "bananas" {
             count(arg);
         }
 
@@ -54,6 +54,10 @@ fn double() {
     // by 2) until `x` is larger than 500.  Increment `count` each time through the loop. Run it
     // with `cargo run double`  Hint: The answer is 9 times.
 
+    while x <= 500 {
+        x *= 2;
+        count += 1;
+    }
 
     println!("You can double x {} times until x is larger than 500", count);
 }
@@ -63,6 +67,14 @@ fn count(arg: String) {
     // You will need to count your loops, somehow.  Run it with `cargo run bananas`
     //
     // print!("{} ", arg); // Execute this line 8 times, and then break. `print!` doesn't add a newline.
+    let mut count = 0;
+    loop {
+      if count == 8 {
+        break;
+      }
+      print!("{} ", arg);
+      count = count + 1
+    }
 
 
     println!(); // This will output just a newline at the end for cleanliness.
