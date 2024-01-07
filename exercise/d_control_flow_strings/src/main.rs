@@ -24,7 +24,7 @@ fn main() {
             sum();
         } else if arg == "double" {
             double();
-        } else if arg == "bananas" {
+        } else {
             count(arg);
         }
 
@@ -67,13 +67,15 @@ fn count(arg: String) {
     // You will need to count your loops, somehow.  Run it with `cargo run bananas`
     //
     // print!("{} ", arg); // Execute this line 8 times, and then break. `print!` doesn't add a newline.
-    let mut count = 0;
-    loop {
-      if count == 8 {
-        break;
+    if arg == "bananas" {
+      let mut count = 0;
+      loop {
+        if count == 8 {
+          break;
+        }
+        print!("{} ", arg);
+        count = count + 1
       }
-      print!("{} ", arg);
-      count = count + 1
     }
 
 
