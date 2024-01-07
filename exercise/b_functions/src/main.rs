@@ -9,10 +9,10 @@ fn main() {
     //
     // See if you can fix the error. It is right around here, somewhere.  If you succeed, then
     // doing `cargo run` should succeed and print something out. DONE
-    {
+    
         let area = area_of(width, height);
         println!("Area is {}", area);
-    }
+      
     
 
     // 2. The area that was calculated is not correct! Go fix the area_of() function below, then run
